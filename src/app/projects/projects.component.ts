@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-
-  constructor() { }
+  idperson = 2;
+  constructor(private rout: Router) { }
 
   ngOnInit() {
+  }
+
+  NavHome()
+  {
+
+this.rout.navigate(['/profile'],{queryParams: {id: this.idperson}});
   }
 
 }
