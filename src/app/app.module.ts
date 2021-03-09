@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PageNotFoundComponent } from './PageNotFound/PageNotFound.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
       HomeComponent,
       ProjectsComponent,
-      PageNotFoundComponent
+      PageNotFoundComponent,
+      ProfileComponent
    ],
   imports: [
     BrowserModule,
