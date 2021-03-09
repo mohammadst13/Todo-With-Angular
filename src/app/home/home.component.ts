@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  itemcounter: number = 0;
+  projecttext: string = 'Angular project';
+  projects: string[]= [];
   constructor() { }
 
   ngOnInit() {
+this.itemcounter = this.projects.length;
+  }
+
+  additem()
+  {
+    this.projects.push(this.projecttext);
+    this.projecttext = '';
+    this.itemcounter = this.projects.length;
+  }
+
+  removeitem(i: number)
+  {
+   // this.projects.pop();
+   this.projects.splice(i, 1);
+   this.itemcounter = this.projects.length;
   }
 
 }
